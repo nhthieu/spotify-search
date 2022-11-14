@@ -1,0 +1,53 @@
+.search-container {
+  width: 40%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  position: relative;
+}
+
+.search-bar__input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 12px;
+  outline: none;
+  max-width: 500px;
+  font-size: 1.6rem;
+}
+
+.search-bar__delete {
+  position: absolute;
+  right: 12px;
+  top: 0px;
+  padding: 12px 6px;
+}
+
+.search-bar__delete:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.search-bar__button {
+  padding: 16px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.search-bar__button:hover {
+  cursor: pointer;
+  color: rgb(185, 181, 181);
+}
+
+.search-bar__icon {
+  font-size: 16px;
+}
