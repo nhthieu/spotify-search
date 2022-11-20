@@ -12,3 +12,19 @@ html {
 body {
   width: 100%;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.col {
+  width: 18%;
+}
+
+.row {
+  width: 80%;
+}

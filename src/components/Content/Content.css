@@ -1,0 +1,59 @@
+.content {
+  width: 100%;
+}
+
+.content__empty {
+  margin: auto;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: rgb(216, 216, 216);
+  font-style: italic;
+}
+
+.content__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.content__item {
+  border-radius: 4px;
+  margin: 12px;
+  padding: 16px;
+  font-size: 1.6rem;
+  box-shadow: 0px 0px 10px #ccc;
+  transition: 0.3s;
+}
+
+.content__item:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgb(176, 173, 173);
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.content__image {
+  margin-bottom: 12px;
+}
+
+.content__image img {
+  width: 100%;
+  display: block;
+}
+
+.content__title {
+  display: block;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 8px 0 16px;
+}
+
+.content__release-date,
+.content__tracks-count {
+  display: block;
+  color: #999;
+  font-size: 1.5rem;
+  margin: 4px 0 16px;
+}

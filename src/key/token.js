@@ -1,0 +1,3 @@
+const authToken = "BQAKGNpGmDJlFoJpJ08v67VDKot4vkBs7HpxSL_FGGSE3jvPBLmnH8a0UVv11ZDyqRSZul-ohG-qCLPC7KA7Cc-aYG9t0aWbr4xuSa630p4_ED3YexkpHND9QDm5OokNk00ErXLFMR6OWfX1ypxvnWWJr3EaUvOLaGZC7w_j6ISpbUppUCMIzRI2zAQiKLwi1go"
+
+export { authToken };

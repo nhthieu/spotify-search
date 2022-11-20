@@ -3,16 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { setSearchValue } from "../../../redux/searchSlice";
 import { useDispatch } from "react-redux";
+import { authToken } from "../../../key/token";
 import "./SearchBar.css";
 
 function SearchBar() {
   const [searchKey, setSearchKey] = useState("");
   const dispatch = useDispatch();
-  const authToken = "BQD3GUoYuxC9rT4r8e0UUp-1JmN0vw2WlyhDfqqN6TDrWmh_MQUMxoJ6iHw0zywXKL498QcpsttJcSiqD0x7kiZ4XQSXd3MBTDUjt7s_Dj9RFZvHU02u8W2mwcbX2Cc1brVrIGxN4B9vpA3onDY-AO0QML-bLlQFe9Rc_-MswXjiM4bm-JuaaXDlN8E2IOmEZVM"
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    setSearchKey("");
+    if (searchKey === "") {
+      alert("Please enter a search term");
+      return;
+    }
+
     try {
       const result = await fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=album`, {
         method: "GET",
@@ -43,6 +47,7 @@ function SearchBar() {
           placeholder="Search for an album"
           value={searchKey}
           onChange={(e) => setSearchKey(e.target.value)}
+          onKeyPress={(e) => e.key === "Enter" && handleSearch(e)}
         />
         {
           searchKey &&
@@ -57,7 +62,7 @@ function SearchBar() {
       >
         <FontAwesomeIcon className="search-bar__icon" icon={faSearch} />
       </button>
-    </div>
+    </div >
   );
 }
 
